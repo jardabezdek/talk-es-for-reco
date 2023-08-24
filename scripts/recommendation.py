@@ -1,4 +1,18 @@
-"""Script for posts recommendation in the ElasticSearch."""
+"""
+Script for posts recommendation in Elasticsearch.
+
+This script utilizes Elasticsearch to recommend posts to a user based on various factors.
+It applies a scoring mechanism to rank posts and provide personalized recommendations to the user.
+
+Requirements:
+- Elasticsearch connection details must be properly configured in the 'scripts.config' module.
+- The Elasticsearch library must be installed (`pip install elasticsearch`).
+
+Usage:
+1. Ensure that the Elasticsearch connection details are correctly set in 'scripts.config.ES_HOST'.
+2. Modify the 'USER_ID' variable to specify the user for whom posts should be recommended.
+3. Run the script. The recommended posts will be printed to the console.
+"""
 
 from elasticsearch import Elasticsearch
 
@@ -8,7 +22,14 @@ USER_ID = 8
 
 
 def recommend_posts_to_user(user_id: int) -> None:
-    """Search `users` index for the `search_input`."""
+    """Recommend posts to a user using Elasticsearch scoring.
+
+    Args:
+        user_id (int): ID of the user for whom posts should be recommended.
+
+    Returns:
+        None
+    """
     es = Elasticsearch(ES_HOST)
 
     search_result = es.search(
