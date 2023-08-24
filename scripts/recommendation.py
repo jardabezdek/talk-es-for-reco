@@ -44,7 +44,7 @@ def recommend_posts_to_user(user_id: int) -> None:
                                 "booster_followers": user_id,
                             }
                         },
-                        "weight": 1_000,
+                        "weight": 10,
                     },
                     # more likely recommend posts that are trending in the moment
                     {
@@ -53,7 +53,7 @@ def recommend_posts_to_user(user_id: int) -> None:
                                 "booster_trending": 1,
                             }
                         },
-                        "weight": 100,
+                        "weight": 10,
                     },
                     # less likely recommend posts that were already seen by the user
                     {
@@ -62,7 +62,7 @@ def recommend_posts_to_user(user_id: int) -> None:
                                 "penalty_consumed_by_users": user_id,
                             }
                         },
-                        "weight": 0.001,
+                        "weight": 0.01,
                     },
                     # try to NOT recommend posts created by the user
                     {
