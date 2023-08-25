@@ -38,7 +38,7 @@ def create_indices(name_to_config: dict) -> None:
         es.options(ignore_status=400).indices.create(
             index=index_name,
             settings=index_config.get("settings"),
-            mappings=index_config.get("settings"),
+            mappings=index_config.get("mappings"),
         )
         print(f"✅ Created `{index_name}` index.")
 
