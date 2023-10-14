@@ -1,4 +1,4 @@
-# :rocket: talk-pycon-my-2023
+# :rocket: talk-es-for-reco
 
 Demo code for the following talk: "Shaping Elasticsearch for Recommendation System"
 
@@ -14,15 +14,15 @@ In order to create a working environment, the [docker](https://www.docker.com/)
 is used. To start it, please, follow the next steps.
 
 1. Launch the docker daemon.
-1. Get to the repository root folder: `cd ~/projects/talk-pycon-my-2023/`
+1. Get to the repository root folder: `cd ~/projects/talk-es-for-reco/`
 1. Run the docker containers: `docker compose up`
-1. In another terminal instance, check that both containers - `talk-pycon-my-2023-python-1`,
-and `talk-pycon-my-2023-elasticsearch-1` - are running: `docker ps`
+1. In another terminal instance, check that both containers - `talk-es-for-reco-python-1`,
+and `talk-es-for-reco-elasticsearch-1` - are running: `docker ps`
 1. In another terminal instance, run `docker ps`, and check that both containers are running:
-    1. `talk-pycon-my-2023-python-1`,
-    1. `talk-pycon-my-2023-elasticsearch-1`
+    1. `talk-es-for-reco-python-1`,
+    1. `talk-es-for-reco-elasticsearch-1`
 1. In another terminal instance, get into the container with python environment:
-`docker exec -it talk-pycon-my-2023-python-1 /bin/bash`
+`docker exec -it talk-es-for-reco-python-1 /bin/bash`
 1. Inside the container, run python scripts: `python <path/to/script.py>`
 
 ### :floppy_disk: Elasticsearch
@@ -60,4 +60,9 @@ be printed to the console.
 
 ## :link: Links
 
-- [PyCon MY 2023](https://2023.pycon.my/home)
+- Conferences and meetups:
+  - [Data & AI/ML Lightning Talks (Prague, Czechia)](https://www.meetup.com/strv-meetups/events/290896731/)
+  - [Data & AI/ML Lightning Talks (Brno, Czechia)](https://www.meetup.com/strv-meetups/events/290896746/)
+  - [Data Meetup #2: Machine learning applications in the product development (Bratislava, Slovakia)](https://www.linkedin.com/events/datameetup-2-machinelearningapp7022228737978998784/about/)
+  - [PyCon MY 2023 (Kuala Lumpur, Malaysia)](https://pyconmy2023.peatix.com/)
+  - [Moderni stack vol. 4 (Ostrava, Czechia)](https://agrp.dev/konference/moderni-stack-vol-4/)
