@@ -44,7 +44,7 @@ def search_users_index(search_input: str) -> None:
         query={
             "multi_match": {
                 # string that will be searched for
-                "query": f"{search_input}",
+                "query": search_input,
                 # fields that will be searched in
                 "fields": ["name", "city", "country"],
                 # enable fuzzy search to be able to find results even when misspelling the query
