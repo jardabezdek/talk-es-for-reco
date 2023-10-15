@@ -16,14 +16,12 @@ is used. To start it, please, follow the next steps.
 1. Launch the docker daemon.
 1. Get to the repository root folder: `cd ~/projects/talk-es-for-reco/`
 1. Run the docker containers: `docker compose up`
-1. In another terminal instance, check that both containers - `talk-es-for-reco-python-1`,
-and `talk-es-for-reco-elasticsearch-1` - are running: `docker ps`
 1. In another terminal instance, run `docker ps`, and check that both containers are running:
-    1. `talk-es-for-reco-python-1`,
-    1. `talk-es-for-reco-elasticsearch-1`
+    1. `container-python`
+    1. `container-elasticsearch`
 1. In another terminal instance, get into the container with python environment:
-`docker exec -it talk-es-for-reco-python-1 /bin/bash`
-1. Inside the container, run python scripts: `python <path/to/script.py>`
+`docker exec -it container-python /bin/bash`
+1. Inside the container, run python scripts like this: `python <path/to/script.py>`
 
 ### :floppy_disk: Elasticsearch
 
@@ -43,7 +41,7 @@ the 'users' index based on the provided search input.
 Usage:
 
 1. Modify the `SEARCH_INPUT` variable to specify the search term.
-2. Run the script: `python /usr/src/app/scripts/search.py` The search results will be printed
+1. Run the script: `python /usr/src/app/scripts/search.py` The search results will be printed
 to the console.
 
 ### :two: Recommendation
@@ -55,8 +53,8 @@ and provide personalized recommendations to the user.
 Usage:
 
 1. Modify the `USER_ID` variable to specify the user for whom posts should be recommended.
-3. Run the script: `python /usr/src/app/scripts/recommendation.py` The recommended posts will
-be printed to the console.
+1. Run the script: `python /usr/src/app/scripts/recommendation.py` The recommended posts will
+be printed to the console, sorted from the most relevant to the least relevant one.
 
 ## :link: Links
 
